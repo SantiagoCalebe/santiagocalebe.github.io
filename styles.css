@@ -1,0 +1,338 @@
+/* Definir a fonte personalizada */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/font.ttf') format('truetype');
+    font-style: normal;
+}
+
+body {
+    font-family: 'CustomFont', sans-serif; /* Usar a fonte personalizada */
+    background-color: #E9D8FF; /* Fundo lilás */
+    color: #333; /* Texto escuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #C4A3FF; /* Cabeçalho lilás claro */
+    padding: 1em 0;
+    opacity: 0.7;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #7B68EE; /* Cor de destaque */
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 2em;
+    margin: 1em;
+    background-color: #F5EBFF; /* Container lilás bem claro */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #7B68EE;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+}
+
+.projeto {
+    background-color: #D8B4FE; /* Projeto lilás */
+    padding: 1em;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.projeto:hover {
+    transform: translateY(-5px); /* Efeito hover */
+}
+
+footer {
+    background-color: #C4A3FF;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.quadradinhos-container {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.quadradinho {
+    width: 150px;
+    height: 150px;
+    background-color: #C4A3FF; /* Roxo */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.quadradinhos-container:hover {
+    transform: translateY(-5px); /* Efeito hover */
+}
+
+.quadradinhos img:hover {
+    transform: translateY(-5px); /* Efeito hover */
+}
+
+.quadradinho:hover {
+    transform: translateY(-5px); /* Efeito hover */
+}
+
+.quadradinho img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.backdrop {
+    background-image: url('images/grid.png'); /* Caminho da imagem de fundo */
+    background-repeat: repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: scrollBackground 20s linear infinite; /* Animação */
+}
+
+@keyframes scrollBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0; /* Move a imagem horizontalmente */
+    }
+}
+
+.name-image-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.container-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative; /* Necessário para posicionar o conteúdo acima do backdrop */
+    z-index: 1; /* Garante que o conteúdo fique acima do backdrop */
+    color: rgb(0, 0, 0);
+}
+
+.name-image-container img {
+    width: 150px; /* Largura da imagem */
+    height: 150px; /* Altura da imagem */
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    object-fit: cover; /* Ajusta a imagem ao tamanho do contêiner */
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Colunas responsivas */
+    gap: 20px; /* Espaçamento entre os contêineres */
+}
+
+.projeto {
+    background-color: #D8B4FE; /* Fundo do contêiner do projeto */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra para efeito de profundidade */
+}
+
+.projeto img {
+    width: 100%; /* Ajusta a imagem para preencher o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px; /* Bordas arredondadas para a imagem */
+}
+
+.projeto iframe {
+    width: 100%; /* Ajusta o iframe para preencher o contêiner */
+    height: 150px; /* Altura fixa para o vídeo */
+    border-radius: 5px; /* Bordas arredondadas para o iframe */
+}
+
+#coding {
+    text-align: center; /* Centraliza o texto dentro da seção */
+}
+
+#coding .projeto {
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin-bottom: 1em; /* Espaçamento entre projetos */
+}
+
+#coding .projeto h3,
+#coding .projeto p {
+    margin: 0.5em 0; /* Espaçamento entre título e descrição */
+}
+
+#links .links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+#links .link-item {
+    background-color: #D8B4FE; /* Cor de fundo do item de link */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center; /* Centraliza o texto */
+    transition: transform 0.3s ease; /* Efeito de transição */
+}
+
+#links .link-item:hover {
+    transform: translateY(-5px); /* Efeito hover */
+}
+
+#links .link-item a {
+    text-decoration: none; /* Remove sublinhado */
+    color: inherit; /* Mantém a cor do texto */
+}
+
+#links .link-item h3 {
+    margin-bottom: 5px; /* Espaçamento abaixo do título */
+}
+
+#links .link-item p {
+    margin: 0; /* Remove margens do parágrafo */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    #links .links-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #links .link-item {
+        width: 80%; /* Largura maior em telas menores */
+    }
+}
+
+#sobre {
+    text-align: center; /* Centraliza o texto dentro da seção */
+    padding: 20px;
+}
+
+#sobre h2 {
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+}
+
+#sobre p {
+    margin: 10px 0; /* Espaçamento entre os parágrafos */
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+#timer {
+    font-size: 40px;
+    color: #333;
+}
+
+#commissions {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#commissions h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#commissions p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.commission-item {
+    background-color: #D8B4FE;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.commission-item:hover {
+    transform: translateY(-5px);
+}
+
+.commission-item h3 {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Center images horizontally */
+    gap: 20px; /* Spacing between images */
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 150px; /* Adjust as needed */
+    height: 150px;
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Rounded corners for images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Shadow for images */
+}
