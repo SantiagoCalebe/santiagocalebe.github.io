@@ -1,0 +1,64 @@
+<!--
+  Project: santiagocalebe.github.io
+  Author: SantiagoCalebe
+  Repository: https://github.com/santiagocalebe/santiagocalebe.github.io/
+  All rights reserved.
+
+  Unauthorized copying, modification, distribution, or derivative works
+  of this code are strictly prohibited under the U.S. Copyright Act (Title 17, United States Code)
+  or Article 29 of Law No. 9,610/1998 (Brazilian Copyright Law).
+  [Artigo 29 da Lei nº 9.610/1998 (Lei de Direitos Autorais).]
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <title>Santiago >-<</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div class="left-box">
+        <h1>Haii! I am<br /><b>Santiago</b>!</h1>
+        <p>
+          <b>Python</b> and <b>HaxeFlixel</b> Programmer<br />
+          Programmer and Director of <b>Project P.U.P</b>.
+        </p>
+
+        <button id="github-btn">Github</button>
+        <button id="x-btn">X (Twitter)</button>
+      </div>
+
+      <img src="img/santiFB.png" class="santi" />
+
+      <div class="music-player" id="music-player">
+        <div class="music-info">
+          <h2 id="music-title">Carregando...</h2>
+        </div>
+        <div class="music-time">
+          <span id="current-time">00:00</span> -
+          <span id="total-time">00:00</span>
+        </div>
+        <div class="music-controls">
+          <button id="prev">‹</button>
+          <button id="play">▶</button>
+          <button id="next">›</button>
+        </div>
+        <audio id="audio"></audio>
+      </div>
+    </div>
+
+    <script src="javascript/utils.js" defer></script>
+    <script src="javascript/commands.js" defer></script>
+    <script src="javascript/typingEffect.js" defer></script>
+    <script src="javascript/windowAnimation.js" defer></script>
+    <script src="javascript/buttonLinks.js" defer></script>
+    <script src="javascript/main.js" defer></script>
+    <script src="javascript/musicPlayer.js"></script>
+  </body>   
+</html>

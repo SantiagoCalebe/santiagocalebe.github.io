@@ -1,0 +1,196 @@
+/*
+Project: santiagocalebe.github.io
+Author: SantiagoCalebe
+Repository: https://github.com/santiagocalebe/santiagocalebe.github.io/
+All rights reserved.
+
+Unauthorized copying, modification, distribution, or derivative works
+of this code are strictly prohibited under the U.S. Copyright Act (Title 17, United States Code)
+or Article 29 of Law No. 9,610/1998 (Brazilian Copyright Law). 
+[Artigo 29 da Lei nº 9.610/1998 (Lei de Direitos Autorais).]
+*/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes goffyahhEnter {
+  from {
+    left: 120%;
+    opacity: 0;
+  }
+  to {
+    left: 75%;
+    opacity: 1;
+  }
+}
+
+@keyframes playerEnter {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('fonts/font.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-family: 'CustomFont';
+  overflow: hidden;
+  position: relative;
+  cursor: url('img/cursor.png'), auto !important;
+}
+
+#container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+.left-box {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: auto;
+  padding-left: 50px;
+  animation: fadeIn 2s ease-in;
+  z-index: 2;
+}
+
+.typing-cmd {
+  position: absolute;
+  color: rgb(111, 0, 255);
+  font-size: 1.5em;
+  white-space: nowrap;
+  border-right: 2px solid rgb(255, 255, 255);
+  pointer-events: none;
+  user-select: none;
+  opacity: 1;
+}
+
+.santi {
+  position: absolute;
+  top: 60%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  max-width: 120vw;    
+  max-height: 120vh;
+  width: auto;
+  height: auto;
+  animation: goffyahhEnter 3.60s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+h1 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 20px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'CustomFont';
+  margin-top: 0px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+.music-player {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: 2px solid white;
+  padding: 12px;
+  z-index: 9999;
+  font-family: 'CustomFont', sans-serif;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+  animation: playerEnter 1.5s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+}
+
+.music-info h2 {
+  font-size: 14px;
+  margin: 0 0 6px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.music-time {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  color: #ccc;
+}
+
+.music-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.music-controls button {
+  flex: 1 1 0;
+  min-width: 0;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  padding: 6px 0;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: 'CustomFont', sans-serif;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.music-controls button:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+  transform: translateY(-3px);
+}
