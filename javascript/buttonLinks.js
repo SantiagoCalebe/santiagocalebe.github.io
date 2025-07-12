@@ -15,5 +15,5 @@ document.getElementById('github-btn').addEventListener('click', () => {
 });
 
 document.getElementById('x-btn').addEventListener('click', () => {
-  window.open('https://x.com/ssant_dev', '_blank');
+  window.open('https://x.com/santideveloper', '_blank');
 });
