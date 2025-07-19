@@ -1,27 +1,50 @@
-<!--
-  Project: santiagocalebe.github.io
-  Author: SantiagoCalebe
-  Repository: https://github.com/santiagocalebe/santiagocalebe.github.io/
-  All rights reserved.
-
-  Unauthorized copying, modification, distribution, or derivative works
-  of this code are strictly prohibited under the U.S. Copyright Act (Title 17, United States Code)
-  or Article 29 of Law No. 9,610/1998 (Brazilian Copyright Law).
-  [Artigo 29 da Lei nº 9.610/1998 (Lei de Direitos Autorais).]
--->
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
     <title>Santiago >-<</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <noscript>
+      <style>
+        #no-js-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background-color: #1a1a1a;
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          z-index: 99999;
+          font-family: sans-serif;
+          text-align: center;
+          padding: 2rem;
+        }
+        #no-js-overlay h1 {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+        #no-js-overlay p {
+          font-size: 1.2rem;
+          max-width: 500px;
+        }
+      </style>
+      <div id="no-js-overlay">
+        <h1>JavaScript is disabled</h1>
+        <p>
+          This website relies heavily on JavaScript to work properly.<br />
+          Please enable JavaScript in your browser and reload the page.
+        </p>
+      </div>
+    </noscript>
+
     <div id="container">
       <div class="left-box">
         <h1>Haii! I am<br /><b>Santiago</b>!</h1>
@@ -29,9 +52,8 @@
           <b>Python</b>, <b>WebLanguages</b> and <b>HaxeFlixel</b> programmer,
         </p>
         <p>
-           & Director of <b>Project P.U.P</b>.
+          & Director of <b>Project P.U.P</b>.
         </p>
-
         <button id="github-btn">Github</button>
         <button id="x-btn">X (Twitter)</button>
       </div>
@@ -40,7 +62,7 @@
 
       <div class="music-player" id="music-player">
         <div class="music-info">
-          <h2 id="music-title">Carregando...</h2>
+          <h2 id="music-title">Loading...</h2>
         </div>
         <div class="music-time">
           <span id="current-time">00:00</span> -
@@ -62,5 +84,5 @@
     <script src="javascript/buttonLinks.js" defer></script>
     <script src="javascript/main.js" defer></script>
     <script src="javascript/musicPlayer.js"></script>
-  </body>   
+  </body>
 </html>
