@@ -51,14 +51,14 @@ const projects = [
     description: "Gravador de tela usando MediaRecorder API.",
     image: "assets/img/projetos/WebRecorder.png",
     link: "https://santiagocalebe.github.io/web-recorder",
-    status: "Finalizado"
+    status: "Publicado"
   },
   {
     title: "SantiagoLauncher",
     description: "Launcher de Minecraft usando minecraft_launcher.lib.",
     image: "assets/img/projetos/SLauncher.png",
     link: "https://santiagolauncher.github.io/",
-    status: "Finalizado"
+    status: "Publicado"
   },
 ];
 
@@ -81,4 +81,5 @@ projects.forEach(project => {
   `;
 
   grid.appendChild(card);
+
 });
